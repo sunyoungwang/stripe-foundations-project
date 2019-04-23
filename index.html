@@ -1,17 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    />
-    <link rel="stylesheet" href="./styles.css" />
-  </head>
-  <!-- 
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Stripe Foundations</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<!-- 
   _________ __         .__                ___________                      .___       __  .__                      
  /   _____//  |________|__|_____   ____   \_   _____/___  __ __  ____    __| _/____ _/  |_|__| ____   ____   ______
  \_____  \\   __\_  __ \  \____ \_/ __ \   |    __)/  _ \|  |  \/    \  / __ |\__  \\   __\  |/  _ \ /    \ /  ___/
@@ -19,373 +17,271 @@
 /_______  /|__|  |__|  |__|   __/ \___  >  \___  / \____/|____/|___|  /\____ |(____  /__| |__|\____/|___|  /____  >
         \/                |__|        \/       \/                   \/      \/     \/                    \/     \/ 
 -->
-  <body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light mb-4">
-      <a class="navbar-brand" href="/">Stripe Foundations</a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-    </nav>
-    <!-- /Navigation -->
 
-    <!-- Carousel -->
-    <div id="carousel-wrapper" class="carousel slide" data-ride="carousel">
-      <div class="carousel-inner">
-        <!-- Item -->
-        <div class="carousel-item active">
-          <img
-            src="https://source.unsplash.com/1200x400?water"
-            alt=" Carousel Wrapper Image"
-          />
-        </div>
-        <!-- /Item -->
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light mb-4">
+    <a class="navbar-brand" href="/">Stripe Foundations</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </nav>
+  <!-- /Navigation -->
 
-        <!-- Item -->
-        <div class="carousel-item">
-          <img
-            src="https://source.unsplash.com/1200x400?nature"
-            alt=" Carousel Wrapper Image"
-          />
-        </div>
-        <!-- /Item -->
+  <!-- Carousel -->
+  <div id="carousel-wrapper" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <!-- Item -->
+      <div class="carousel-item active">
+        <img src="https://source.unsplash.com/1200x400?water" alt=" Carousel Wrapper Image" />
+      </div>
+      <!-- /Item -->
 
-        <!-- Item -->
-        <div class="carousel-item">
-          <img
-            src="https://source.unsplash.com/1200x400?random"
-            alt=" Carousel Wrapper Image"
-          />
-        </div>
-        <!-- /Item -->
+      <!-- Item -->
+      <div class="carousel-item">
+        <img src="https://source.unsplash.com/1200x400?nature" alt=" Carousel Wrapper Image" />
+      </div>
+      <!-- /Item -->
 
-        <!-- Item -->
-        <div class="carousel-item">
-          <img
-            src="https://source.unsplash.com/1200x400?fashion"
-            alt=" Carousel Wrapper Image"
-          />
-        </div>
-        <!-- /Item -->
+      <!-- Item -->
+      <div class="carousel-item">
+        <img src="https://source.unsplash.com/1200x400?random" alt=" Carousel Wrapper Image" />
+      </div>
+      <!-- /Item -->
+
+      <!-- Item -->
+      <div class="carousel-item">
+        <img src="https://source.unsplash.com/1200x400?fashion" alt=" Carousel Wrapper Image" />
+      </div>
+      <!-- /Item -->
+    </div>
+  </div>
+  <!-- /Carousel -->
+
+  <!-- Products -->
+  <div class="card-deck m-4">
+    <!-- Card -->
+    <div class="card" data-title="MEZONE: Best-Sounding Sung-Fit True Wireless Stereo+ Earbuds"
+      data-description="80-hr battery life/Wireless charging case/8-hr playtime/IPX7 waterproof/BT5.0/Big data ergonomic design"
+      data-price="130" id="product1">
+      <div class="card-body text-center">
+        <img
+          src="https://ksr-ugc.imgix.net/assets/024/227/959/a22afa06f9fd1e5988f65915a9348e65_original.jpg?ixlib=rb-1.1.0&w=680&fit=max&v=1551263277&auto=format&gif-q=50&q=92&s=e9711ed2f7416cb237772b3ea62db8b7"
+          class="card-img-top" alt="Mezone" />
+        <h5 class="card-title">
+          MEZONE: Best-Sounding Sung-Fit True Wireless Stereo+ Earbuds
+        </h5>
+        <p class="card-text">
+          80-hr battery life/Wireless charging case/8-hr playtime/IPX7
+          waterproof/BT5.0/Big data ergonomic design
+        </p>
+      </div>
+      <div class="card-footer">
+        <button type="button" class="btn btn-primary btn-block" onclick="openProductModal('product1')">
+          Buy Product
+        </button>
       </div>
     </div>
-    <!-- /Carousel -->
-
-    <!-- Products -->
-    <div class="card-deck m-4">
-      <!-- Card -->
-      <div class="card">
-        <div class="card-body text-center">
-          <img
-            src="https://ksr-ugc.imgix.net/assets/024/227/959/a22afa06f9fd1e5988f65915a9348e65_original.jpg?ixlib=rb-1.1.0&w=680&fit=max&v=1551263277&auto=format&gif-q=50&q=92&s=e9711ed2f7416cb237772b3ea62db8b7"
-            class="card-img-top"
-            alt="Mezone"
-          />
-          <h5 class="card-title">
-            MEZONE: Best-Sounding Sung-Fit True Wireless Stereo+ Earbuds
-          </h5>
-          <p class="card-text">
-            80-hr battery life/Wireless charging case/8-hr playtime/IPX7
-            waterproof/BT5.0/Big data ergonomic design
-          </p>
-        </div>
-        <div class="card-footer">
-          <button
-            type="button"
-            class="btn btn-primary btn-block"
-            onclick="openProductModal()"
-          >
-            Buy Product
-          </button>
-        </div>
+    <!-- /Card -->
+    <!-- Card -->
+    <div class="card" id="product2" data-title="Assemblage: Modular tech & gadget hub - for home & away."
+      data-description="Customizable audio, video, connectivity system of stackable modules that are feature-packed individually and more powerful together."
+      data-price="180">
+      <div class="card-body text-center">
+        <img
+          src="https://ksr-ugc.imgix.net/assets/024/012/139/8b84f1b2a92e4c0159745e6209fa9d5c_original.gif?ixlib=rb-1.1.0&w=680&fit=max&v=1549485704&auto=format&gif-q=50&q=92&s=3117c5463eb31b47b0ec4977f809736f"
+          class="card-img-top" alt="..." />
+        <h5 class="card-title">
+          Assemblage: Modular tech & gadget hub - for home & away.
+        </h5>
+        <p class="card-text">
+          Customizable audio, video, connectivity system of stackable modules
+          that are feature-packed individually and more powerful together.
+        </p>
       </div>
-      <!-- /Card -->
-      <!-- Card -->
-      <div class="card">
-        <div class="card-body text-center">
-          <img
-            src="https://ksr-ugc.imgix.net/assets/024/012/139/8b84f1b2a92e4c0159745e6209fa9d5c_original.gif?ixlib=rb-1.1.0&w=680&fit=max&v=1549485704&auto=format&gif-q=50&q=92&s=3117c5463eb31b47b0ec4977f809736f"
-            class="card-img-top"
-            alt="..."
-          />
-          <h5 class="card-title">
-            Assemblage: Modular tech & gadget hub - for home & away.
-          </h5>
-          <p class="card-text">
-            Customizable audio, video, connectivity system of stackable modules
-            that are feature-packed individually and more powerful together.
-          </p>
-        </div>
-        <div class="card-footer">
-          <button
-            type="button"
-            class="btn btn-primary btn-block"
-            onclick="openProductModal()"
-          >
-            Buy Product
-          </button>
-        </div>
+      <div class="card-footer">
+        <button type="button" class="btn btn-primary btn-block" onclick="openProductModal('product2')">
+          Buy Product
+        </button>
       </div>
-      <!-- /Card -->
-      <!-- Card -->
-      <div class="card">
-        <div class="card-body text-center">
-          <img
-            src="https://ksr-ugc.imgix.net/assets/024/108/853/7862fe8def5abd54bb2af0aa9eaa2cdd_original.png?ixlib=rb-1.1.0&w=680&fit=max&v=1550277884&auto=format&gif-q=50&lossless=true&s=f7f8b54154ed45c6b1002110fbc66ed5"
-            class="card-img-top"
-            alt="..."
-          />
-          <h5 class="card-title">
-            Sphero RVR – The go anywhere, do anything programmable robot
-          </h5>
-          <p class="card-text">
-            Drive, program, and customize out of the box. Make, build, and
-            expand with 3rd party hardware.
-          </p>
-        </div>
-        <div class="card-footer">
-          <button
-            type="button"
-            class="btn btn-primary btn-block"
-            onclick="openProductModal()"
-          >
-            Buy Product
-          </button>
-        </div>
-      </div>
-      <!-- /Card -->
     </div>
-    <div class="card-deck m-4">
-      <!-- Card -->
-      <div class="card">
-        <div class="card-body text-center">
-          <img
-            src="https://ksr-ugc.imgix.net/assets/024/007/518/ce7240cb47939e0680a7930b3e360273_original.gif?ixlib=rb-1.1.0&w=680&fit=max&v=1549453576&auto=format&gif-q=50&q=92&s=f0fa62e5d2e38c818eee55c866a8c390"
-            class="card-img-top"
-            alt="..."
-          />
-          <h5 class="card-title">
-            Hio key: keep your digital life secure
-          </h5>
-          <p class="card-text">
-            The single key you need to have secure, faster login everywhere.
-          </p>
-        </div>
-        <div class="card-footer">
-          <button
-            type="button"
-            class="btn btn-primary btn-block"
-            onclick="openProductModal()"
-          >
-            Buy Product
-          </button>
-        </div>
+    <!-- /Card -->
+    <!-- Card -->
+    <div class="card" id="product3" data-price="165"
+      data-description="Drive, program, and customize out of the box. Make, build, and expand with 3rd party hardware."
+      data-title="Sphero RVR – The go anywhere, do anything programmable robot">
+      <div class="card-body text-center">
+        <img
+          src="https://ksr-ugc.imgix.net/assets/024/108/853/7862fe8def5abd54bb2af0aa9eaa2cdd_original.png?ixlib=rb-1.1.0&w=680&fit=max&v=1550277884&auto=format&gif-q=50&lossless=true&s=f7f8b54154ed45c6b1002110fbc66ed5"
+          class="card-img-top" alt="..." />
+        <h5 class="card-title">
+          Sphero RVR – The go anywhere, do anything programmable robot
+        </h5>
+        <p class="card-text">
+          Drive, program, and customize out of the box. Make, build, and
+          expand with 3rd party hardware.
+        </p>
       </div>
-      <!-- /Card -->
-      <!-- Card -->
-      <div class="card">
-        <div class="card-body text-center">
-          <img
-            src="https://ksr-ugc.imgix.net/assets/024/082/857/8809d3cf54f58b1307811c7f843960fb_original.gif?ixlib=rb-1.1.0&w=680&fit=max&v=1550080366&auto=format&gif-q=50&q=92&s=2900fa5f1da4795d2d65f1692fdacc83"
-            class="card-img-top"
-            alt="..."
-          />
-          <h5 class="card-title">
-            SNOW | A state-of-the-art, wireless teeth whitening system.
-          </h5>
-          <p class="card-text">
-            The SNOW you know and love is back with a new and innovative
-            wireless teeth whitening system with dual light technology.
-          </p>
-        </div>
-        <div class="card-footer">
-          <button
-            type="button"
-            class="btn btn-primary btn-block"
-            onclick="openProductModal()"
-          >
-            Buy Product
-          </button>
-        </div>
+      <div class="card-footer">
+        <button type="button" class="btn btn-primary btn-block" onclick="openProductModal('product3')">
+          Buy Product
+        </button>
       </div>
-      <!-- /Card -->
-      <!-- Card -->
-      <div class="card">
-        <div class="card-body">
-          <img
-            src="https://ksr-ugc.imgix.net/assets/023/938/654/ec715c6a6034af7ff775fb05d3ff3dc3_original.jpg?ixlib=rb-1.1.0&crop=faces&w=1024&h=576&fit=crop&v=1548866779&auto=format&frame=1&q=92&s=94feee5e11cdbe19aea52297a44f2558"
-            class="card-img-top"
-            alt="..."
-          />
-          <h5 class="card-title">
-            The GO Pack - Best AR Gaming Bag, SwissArmyKnife of Backpack
-          </h5>
-          <p class="card-text">
-            Whether you're working remotely, travel packing, AR gaming, gym
-            training, or textbook hauling, the GO handles all your needs with
-            ease.
-          </p>
-        </div>
-        <div class="card-footer">
-          <button
-            type="button"
-            class="btn btn-primary btn-block"
-            onclick="openProductModal()"
-          >
-            Buy Product
-          </button>
-        </div>
-      </div>
-      <!-- /Card -->
     </div>
-    <!-- /Products -->
+    <!-- /Card -->
+  </div>
+  <div class="card-deck m-4">
+    <!-- Card -->
+    <div class="card" id="product4" data-title="Hio key: keep your digital life secure" data-price="60"
+      data-description="The single key you need to have secure, faster login everywhere.">
+      <div class="card-body text-center">
+        <img
+          src="https://ksr-ugc.imgix.net/assets/024/007/518/ce7240cb47939e0680a7930b3e360273_original.gif?ixlib=rb-1.1.0&w=680&fit=max&v=1549453576&auto=format&gif-q=50&q=92&s=f0fa62e5d2e38c818eee55c866a8c390"
+          class="card-img-top" alt="..." />
+        <h5 class="card-title">
+          Hio key: keep your digital life secure
+        </h5>
+        <p class="card-text">
+          The single key you need to have secure, faster login everywhere.
+        </p>
+      </div>
+      <div class="card-footer">
+        <button type="button" class="btn btn-primary btn-block" onclick="openProductModal('product4')">
+          Buy Product
+        </button>
+      </div>
+    </div>
+    <!-- /Card -->
+    <!-- Card -->
+    <div class="card" id="product5" data-title="SNOW | A state-of-the-art, wireless teeth whitening system."
+      data-price="82"
+      data-description="The SNOW you know and love is back with a new and innovative wireless teeth whitening system with dual light technology.">
+      <div class="card-body text-center">
+        <img
+          src="https://ksr-ugc.imgix.net/assets/024/082/857/8809d3cf54f58b1307811c7f843960fb_original.gif?ixlib=rb-1.1.0&w=680&fit=max&v=1550080366&auto=format&gif-q=50&q=92&s=2900fa5f1da4795d2d65f1692fdacc83"
+          class="card-img-top" alt="..." />
+        <h5 class="card-title">
+          SNOW | A state-of-the-art, wireless teeth whitening system.
+        </h5>
+        <p class="card-text">
+          The SNOW you know and love is back with a new and innovative
+          wireless teeth whitening system with dual light technology.
+        </p>
+      </div>
+      <div class="card-footer">
+        <button type="button" class="btn btn-primary btn-block" onclick="openProductModal('product5')">
+          Buy Product
+        </button>
+      </div>
+    </div>
+    <!-- /Card -->
+    <!-- Card -->
+    <div class="card" id="product6" data-title="The GO Pack - Best AR Gaming Bag, SwissArmyKnife of Backpack"
+      data-price="250"
+      data-description="Whether you're working remotely, travel packing, AR gaming, gym training, or textbook hauling, the GO handles all your needs with ease.">
+      <div class="card-body">
+        <img
+          src="https://ksr-ugc.imgix.net/assets/023/938/654/ec715c6a6034af7ff775fb05d3ff3dc3_original.jpg?ixlib=rb-1.1.0&crop=faces&w=1024&h=576&fit=crop&v=1548866779&auto=format&frame=1&q=92&s=94feee5e11cdbe19aea52297a44f2558"
+          class="card-img-top" alt="..." />
+        <h5 class="card-title">
+          The GO Pack - Best AR Gaming Bag, SwissArmyKnife of Backpack
+        </h5>
+        <p class="card-text">
+          Whether you're working remotely, travel packing, AR gaming, gym
+          training, or textbook hauling, the GO handles all your needs with
+          ease.
+        </p>
+      </div>
+      <div class="card-footer">
+        <button type="button" class="btn btn-primary btn-block" onclick="openProductModal('product6')">
+          Buy Product
+        </button>
+      </div>
+    </div>
+    <!-- /Card -->
+  </div>
+  <!-- /Products -->
 
-    <!-- Footer -->
-    <footer class="footer text-center">
-      <p>Made with love for stripe foundations course</p>
-    </footer>
-    <!-- /Footer -->
+  <!-- Footer -->
+  <footer class="footer text-center">
+    <p>Made with love for stripe foundations course</p>
+  </footer>
+  <!-- /Footer -->
 
-    <!-- Modal -->
-    <div
-      class="modal fade"
-      id="purchaseProductModal"
-      tabindex="-1"
-      role="dialog"
-      aria-labelledby="purchaseProductModal"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="purchaseProductLabel">
-              Purchase Product
-            </h5>
-            <button
-              type="button"
-              class="close"
-              data-dismiss="modal"
-              aria-label="Close"
-            >
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <!-- Form  -->
-          <form
-            action="/pay"
-            method="post"
-            id="payment-form"
-            class="form"
-            onsubmit="purchaseProduct(event)"
-          >
-            <div class="modal-body">
-              <!-- Product Details Jumbo Tron -->
-              <div class="jumbotron jumbotron-fluid">
-                <div class="container">
-                  <h1 class="display-4" id="productItemTitle">Product Title</h1>
-                  <p class="lead" id="productItemDescription">
-                    Product description
-                  </p>
-                  <p class="lead">Product Price</p>
-                </div>
-              </div>
-              <!-- /Product Details Jumbo Tron -->
-              <div class="form-group">
-                <label for="email">Email:</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="email"
-                  name="email"
-                  placeholder="please enter your email"
-                />
-              </div>
-              <div class="form-group">
-                <label for="card_number">Card Number</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  maxlength="16"
-                  id="card_number"
-                  name="card_number"
-                  placeholder="card number"
-                />
-              </div>
-              <div class="form-group">
-                <label for="card_month">Card Expiration Month:</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  maxlength="2"
-                  id="card_month"
-                  name="card_month"
-                  placeholder="card expiration month"
-                />
-              </div>
-              <div class="form-group">
-                <label for="card_year">Card Expiration Year</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  maxlength="4"
-                  id="card_year"
-                  name="card_year"
-                  placeholder="card expiration year"
-                />
-              </div>
-              <div class="form-group">
-                <label for="cvc">CVC number:</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  maxlength="4"
-                  id="cvc"
-                  name="cvc"
-                  placeholder="cvc number"
-                />
+  <!-- Modal -->
+  <div class="modal fade lg" id="purchaseProductModal" tabindex="-1" role="dialog"
+    aria-labelledby="purchaseProductModal" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="purchaseProductLabel">
+            Purchase Product
+          </h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <!-- Form  -->
+        <form action="http://localhost:3333/payment" method="post" id="payment-form" class="form">
+          <div class="modal-body">
+            <!-- Product Details Jumbo Tron -->
+            <div class="jumbotron jumbotron-fluid">
+              <div class="container">
+                <h4 class="display-6" id="productItemTitle">Product Title</h4>
+                <p class="lead" id="productItemDescription">
+                  Product description
+                </p>
               </div>
             </div>
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" name="name" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" name="email" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="price">Price</label>
+              <input type="text" name="price" id="productItemPrice" class="form-control">
+            </div>
+            <!-- /Product Details Jumbo Tron -->
+            <div class="form-row">
+              <label for="card-element">
+                Credit or debit card
+              </label>
+              <div id="card-element">
+                <!-- A Stripe Element will be inserted here. -->
+              </div>
+
+              <!-- Used to display Element errors. -->
+              <div id="card-errors" role="alert"></div>
+            </div>
             <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-secondary"
-                data-dismiss="modal"
-              >
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">
                 Close
               </button>
               <button type="submit" class="btn btn-primary">Purchase</button>
             </div>
-          </form>
-          <!-- /Form -->
-        </div>
+        </form>
+        <!-- /Form -->
       </div>
     </div>
-    <!-- /Modal -->
+  </div>
+  <!-- /Modal -->
 
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-      crossorigin="anonymous"
-    ></script>
-    <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
-    <script src="/app.js"></script>
-  </body>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
+  <script src="https://js.stripe.com/v3/"></script>
+  <script src="/app.js"></script>
+</body>
+
 </html>
