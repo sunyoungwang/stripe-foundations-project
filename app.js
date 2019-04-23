@@ -1,6 +1,7 @@
 const stripe = Stripe('pk_test_7eGxNWLsBhgGKicizQt8IABH');
 const elements = stripe.elements();
 
+// Open the modal
 function openProductModal(productId) {
   let product = document.getElementById(productId);
 
@@ -35,6 +36,7 @@ const card = elements.create('card', {
 // Add an instance of the card Element into the `card-element` <div>.
 card.mount('#card-element');
 
+//Adding event listener on the change event
 card.addEventListener('change', ({
   error
 }) => {
@@ -65,6 +67,11 @@ form.addEventListener('submit', async (event) => {
     stripeTokenHandler(token);
   }
 });
+
+// Handles Payments to be sent to the server
+// Closes Modal on Success
+// Keeps modal open on Failure
+// BONUS: ADD user feedback if process has failed
 
 const stripeTokenHandler = (token) => {
   // Insert the token ID into the form so it gets submitted to the server
